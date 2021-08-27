@@ -12,14 +12,6 @@
     <link rel="mask-icon" href={{ "safari-pinned-tab.svg" | absURL }} color="#00416a">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
-    <!-- IndieWeb identity -->
-    {{ with .Site.Params.IndieWeb.EmailAddress }}<link rel="me" href="mailto:{{ . }}">{{ end }}
-    {{ with .Site.Params.IndieWeb.GitHubUser }}<link rel="me" href="https://github.com/{{ . }}">{{ end }}
-    {{ with .Site.Params.IndieWeb.TwitterUser }}<link rel="me" href="https://twitter.com/{{ . }}">{{ end }}
-    {{ with .Site.Params.IndieWeb.MicroBlogUser }}<link rel="me" href="https://micro.blog/{{ . }}">{{ end }}
-    <!-- IndieWeb endpoints -->
-    <link rel="authorization_endpoint" href={{ .Site.Params.endpoints.Auth | default "https://indieauth.com/auth" }} />
-    <link rel="token_endpoint" href={{ .Site.Params.endpoints.Token | default "https://tokens.indieauth.com/token" }} />
     {{ with .Site.Params.endpoints.Micropub }}
     <link rel="micropub" href="{{ . }}" />{{ end }}
     {{ with .Site.Params.endpoints.Microsub }}
