@@ -8,9 +8,11 @@
         {{ else }}
             <div class="pagination-item-spacer">&nbsp;</div>
         {{end}}
-        <div class="pagination-item-spacer">
-            Page {{ .PageNumber }} of {{ .TotalPages }}
-        </div>
+		{{if ne .TotalPages 1 }}
+			<div class="pagination-item-spacer">
+				Page {{ .PageNumber }} of {{ .TotalPages }}
+			</div>
+        {{end}}
         {{if .HasNext}}
             <div class="pagination-item">
                 <a alt="Older articles" href="{{ .Next.URL }}">Older &rarr;</a>
