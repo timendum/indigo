@@ -19,7 +19,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   body {
-    max-width: 800px;
+    max-width: 1140px;
     font-size: 1.3em;
     width: 90%;
   }
@@ -108,7 +108,7 @@ h5,
 h6 {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  margin-top: 2em;
+  margin-top: 1em;
   padding-top: 0.15em;
 }
 
