@@ -3,7 +3,7 @@
         <div class="pagination-item-spacer">&nbsp;</div>
         {{if .HasPrev}}
             <div class="pagination-item">
-                <a alt="Newer articles" href="{{ .Prev.URL }}">&larr; Newer</a>
+                <a alt="Articoli più recenti" href="{{ .Prev.URL }}">&larr; Più recenti</a>
             </div>
         {{ else }}
             <div class="pagination-item-spacer">&nbsp;</div>
@@ -15,7 +15,7 @@
         {{end}}
         {{if .HasNext}}
             <div class="pagination-item">
-                <a alt="Older articles" href="{{ .Next.URL }}">Older &rarr;</a>
+                <a alt="Articoli meno recenti" href="{{ .Next.URL }}">Meno recenti &rarr;</a>
             </div>
         {{ else }}
             <div class="pagination-item-spacer">&nbsp;</div>

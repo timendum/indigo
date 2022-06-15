@@ -18,17 +18,17 @@
       <nav id="article-skip">
         <div class="next">
           {{ if and (.NextInSection) (not .Params.Menu) }}
-          <a alt="Newer article" href="{{ .NextInSection.Permalink }}">&larr; Newer</a>
+          <a alt="Articoli più recenti" href="{{ .NextInSection.Permalink }}">&larr; Più recenti</a>
           {{ else }}
           <p>&nbsp;</p>
           {{ end }}
         </div>
         <div class="top">
-          <a alt="Top of page" href="#">Top</a>
+          <a alt="Vai all'inizio della pagina" href="#">Sopra</a>
         </div>
         <div class="prev">
           {{ if and (.PrevInSection) (not .Params.Menu) }}
-          <a alt="Older article" href="{{ .PrevInSection.Permalink }}">Older &rarr;</a>
+                <a alt="Articoli meno recenti" href="{{ .PrevInSection.Permalink }}">Meno recenti &rarr;</a>
           {{ else }}
           <p>&nbsp;</p>
           {{ end }}
