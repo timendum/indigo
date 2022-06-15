@@ -10,12 +10,12 @@
         {{end}}
 		{{if ne .TotalPages 1 }}
 			<div class="pagination-item-spacer">
-				Page {{ .PageNumber }} of {{ .TotalPages }}
+				Pagina {{ .PageNumber }} di {{ .TotalPages }}
 			</div>
         {{end}}
         {{if .HasNext}}
             <div class="pagination-item">
-                <a alt="Articoli meno recenti" href="{{ .Next.URL }}">Meno recenti &rarr;</a>
+                <a alt="Articolo meno recenti" href="{{ .Next.URL }}">Meno recenti &rarr;</a>
             </div>
         {{ else }}
             <div class="pagination-item-spacer">&nbsp;</div>

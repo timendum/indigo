@@ -18,7 +18,7 @@
       <nav id="article-skip">
         <div class="next">
           {{ if and (.NextInSection) (not .Params.Menu) }}
-          <a alt="Articoli più recenti" href="{{ .NextInSection.Permalink }}">&larr; Più recenti</a>
+          <a alt="Articolo precedente" href="{{ .NextInSection.Permalink }}">&larr; Precedente</a>
           {{ else }}
           <p>&nbsp;</p>
           {{ end }}
@@ -28,7 +28,7 @@
         </div>
         <div class="prev">
           {{ if and (.PrevInSection) (not .Params.Menu) }}
-                <a alt="Articoli meno recenti" href="{{ .PrevInSection.Permalink }}">Meno recenti &rarr;</a>
+                <a alt="Articolo successivo" href="{{ .PrevInSection.Permalink }}">Successivo &rarr;</a>
           {{ else }}
           <p>&nbsp;</p>
           {{ end }}
