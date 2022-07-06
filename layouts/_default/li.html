@@ -4,7 +4,7 @@
         <h2 class="list-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         {{ end }}
         <p class="list-post-date">
-          <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+          Pubblicato il <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
                 {{ .PublishDate.Format "02-01-2006" }}
           </time>
         </p>
