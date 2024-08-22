@@ -1,5 +1,4 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL | sanitizeurl }}
 {{ $author := .Site.Params.Author }}
 {{ if .Params.Author }}
 {{ $author = .Params.Author }}
@@ -12,14 +11,14 @@
             <p class="post-date">Scritto il 
                 <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
                     {{ .PublishDate.Format "02-01-2006" }}
-                </time> {{ if $author }} da <a href="{{ .Site.BaseURL }}" class="p-author h-card"
+                </time> {{ if $author }} da <a href="{{ absURL "/" }}" class="p-author h-card"
                     rel="author">{{ $author }}</a>{{ end }}
             </p>
             {{ end }}
             {{ if .Params.categories }}
             <p class="post-tag">Category:
                 {{ range .Params.categories }}
-                <a href="{{ $baseurl }}/categories/{{ . | urlize }}" class="post-tag p-category">{{ . }}</a>
+                <a href="{{ absURL "/categories" }}{{ . | urlize }}" class="post-tag p-category">{{ . }}</a>
                 {{ end }}
             </p>
             <hr class="post-underline">
@@ -36,7 +35,7 @@
             <hr class="post-underline">
             <p class="post-tag">Questo post ha i seguenti tag:
                 {{ range .Params.tags }}
-                <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="post-tag p-category">{{ . }}</a>
+                <a href="{{ absURL "/tags/" }}{{ . | urlize }}" class="post-tag p-category">{{ . }}</a>
                 {{ end }}
             </p>
             {{ end }}
